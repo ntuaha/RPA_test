@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爬蟲練習網站 - Web Scraping Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">🕷️ Web Scraping Practice</div>
+            <h1 id="header-title">爬蟲練習網站</h1>
+            <div class="language-selector">
+                <label for="lang">Language:</label>
+                <select id="lang" onchange="changeLanguage()">
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="zh-CN">简体中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <!-- Body -->
+    <main>
+        <div class="container">
+            <div class="content-box">
+                <h2 id="instruction-title">輸入數值以生成結果</h2>
+                <p id="instruction-text">請在下方輸入框中輸入任意文字，然後點擊按鈕以生成 SHA256 雜湊值。</p>
+                
+                <div class="input-section">
+                    <label for="nameInput" id="input-label">輸入名稱：</label>
+                    <input type="text" id="nameInput" placeholder="請輸入名稱...">
+                    <button id="generateBtn" onclick="generateResult()">生成結果</button>
+                </div>
+
+                <div id="resultSection" style="display: none;">
+                    <h3 id="result-title">結果</h3>
+                    <div class="result-info">
+                        <p><strong id="input-value-label">輸入值：</strong><span id="inputValue"></span></p>
+                        <p><strong id="date-label">日期：</strong><span id="currentDate"></span></p>
+                        <p><strong id="combined-label">組合字串：</strong><span id="combinedString"></span></p>
+                        <p><strong id="hash-label">SHA256 雜湊值：</strong><span id="hashResult" class="hash-value"></span></p>
+                    </div>
+                </div>
+
+                <!-- iframe Section -->
+                <div id="iframeSection" style="display: none;">
+                    <h3 id="iframe-title">動態載入內容 (iframe)</h3>
+                    <iframe id="resultFrame" src="" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p id="footer-text">&copy; 2025 爬蟲練習網站 - 僅供教育用途使用</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

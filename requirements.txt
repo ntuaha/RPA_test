@@ -1,0 +1,14 @@
+# Python 爬蟲所需套件
+# 安裝方式：pip install -r requirements.txt
+
+# Selenium - 網頁自動化和爬蟲框架
+selenium>=4.15.0
+
+# Pandas - 資料處理和 Excel 讀寫
+pandas>=2.1.0
+
+# OpenPyXL - Excel 檔案處理（pandas 的依賴）
+openpyxl>=3.1.0
+
+# WebDriver Manager（選用）- 自動管理 ChromeDriver
+# webdriver-manager>=4.0.0
