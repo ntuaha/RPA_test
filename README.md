@@ -53,7 +53,7 @@ pip install "setuptools-80.9.0-py3-none-any.whl" -i https://pypi.org/simple --tr
 pip install -r requirements.txt -i https://pypi.org/simple --trusted-host pypi.org --trusted-host files.pythonhosted.org
 
 # 執行爬蟲（記得先更新 test_data.xlsx 中的 URL）
-python web_scraper.py
+python main.py
 ```
 
 ## 📂 專案結構
@@ -66,7 +66,7 @@ RPA_test/
 │   └── script.js           # JavaScript
 │
 ├── 爬蟲檔案
-│   ├── web_scraper.py      # 爬蟲程式
+│   ├── main.py      # 爬蟲程式
 │   ├── test_data.xlsx      # 測試資料
 │   └── requirements.txt    # Python 依賴
 │
@@ -134,7 +134,7 @@ RPA_test/
 
 ### 爬蟲操作
 1. 準備 Excel 檔案（name, url 欄位）
-2. 執行 `python web_scraper.py`
+2. 執行 `python main.py`
 3. 程式自動訪問網站、輸入資料、提取結果
 4. 查看輸出檔案 `test_data_結果.xlsx`
 
@@ -224,7 +224,7 @@ pip install "setuptools-80.9.0-py3-none-any.whl" -i https://pypi.org/simple --tr
 pip install -r requirements.txt -i https://pypi.org/simple --trusted-host pypi.org --trusted-host files.pythonhosted.org
 
 # Run scraper (remember to update URL in test_data.xlsx)
-python web_scraper.py
+python main.py
 ```
 
 ## 📂 Project Structure
@@ -237,7 +237,7 @@ RPA_test/
 │   └── script.js           # JavaScript
 │
 ├── Scraper Files
-│   ├── web_scraper.py      # Scraper program
+│   ├── main.py      # Scraper program
 │   ├── test_data.xlsx      # Test data
 │   └── requirements.txt    # Python dependencies
 │
@@ -305,7 +305,7 @@ Website features:
 
 ### Scraper Operations
 1. Prepare Excel file (with name, url columns)
-2. Run `python web_scraper.py`
+2. Run `python main.py`
 3. The program automatically visits the website, enters data, and extracts results
 4. Check output file `test_data_結果.xlsx`
 
@@ -395,7 +395,7 @@ pip install "setuptools-80.9.0-py3-none-any.whl" -i https://pypi.org/simple --tr
 pip install -r requirements.txt -i https://pypi.org/simple --trusted-host pypi.org --trusted-host files.pythonhosted.org
 
 # スクレイパーの実行（test_data.xlsxのURLを更新することを忘れずに）
-python web_scraper.py
+python main.py
 ```
 
 ## 📂 プロジェクト構造
@@ -408,7 +408,7 @@ RPA_test/
 │   └── script.js           # JavaScript
 │
 ├── スクレイパーファイル
-│   ├── web_scraper.py      # スクレイパープログラム
+│   ├── main.py      # スクレイパープログラム
 │   ├── test_data.xlsx      # テストデータ
 │   └── requirements.txt    # Python依存関係
 │
@@ -476,7 +476,7 @@ RPA_test/
 
 ### スクレイパー操作
 1. Excelファイルを準備（name、url列を含む）
-2. `python web_scraper.py` を実行
+2. `python main.py` を実行
 3. プログラムが自動的にウェブサイトにアクセスし、データを入力し、結果を抽出します
 4. 出力ファイル `test_data_結果.xlsx` を確認
 
@@ -566,7 +566,7 @@ pip install "setuptools-80.9.0-py3-none-any.whl" -i https://pypi.org/simple --tr
 pip install -r requirements.txt -i https://pypi.org/simple --trusted-host pypi.org --trusted-host files.pythonhosted.org
 
 # 执行爬虫（记得先更新 test_data.xlsx 中的 URL）
-python web_scraper.py
+python main.py
 ```
 
 ## 📂 项目结构
@@ -579,7 +579,7 @@ RPA_test/
 │   └── script.js           # JavaScript
 │
 ├── 爬虫文件
-│   ├── web_scraper.py      # 爬虫程序
+│   ├── main.py      # 爬虫程序
 │   ├── test_data.xlsx      # 测试数据
 │   └── requirements.txt    # Python 依赖
 │
@@ -647,7 +647,7 @@ RPA_test/
 
 ### 爬虫操作
 1. 准备 Excel 文件（name, url 栏位）
-2. 执行 `python web_scraper.py`
+2. 执行 `python main.py`
 3. 程序自动访问网站、输入数据、提取结果
 4. 查看输出文件 `test_data_結果.xlsx`
 
