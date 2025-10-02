@@ -35,11 +35,13 @@ python3 -m http.server 8000
 
 ```bash
 # 建立虛擬環境
-python3 -m venv venv
+# please type 'python -V' to check your Python version 3.12 -> 312
+python -m venv venv
 source venv/bin/activate
-
+pip install "pywin32-311-cp312-cp312-win_amd64.whl" -i https://pypi.org/simple --trusted-host pypi.org --trusted-host files.pythonhosted.org
+pip install "setuptools-80.9.0-py3-none-any.whl" -i https://pypi.org/simple --trusted-host pypi.org --trusted-host files.pythonhosted.org
 # 安裝依賴
-pip install -r requirements.txt
+pip install -r requirements.txt -i https://pypi.org/simple --trusted-host pypi.org --trusted-host files.pythonhosted.org
 
 # 執行爬蟲（記得先更新 test_data.xlsx 中的 URL）
 python web_scraper.py
