@@ -13,7 +13,13 @@ const translations = {
         hashLabel: 'SHA256 雜湊值：',
         iframeTitle: '動態載入內容 (iframe)',
         footerText: '© 2025 爬蟲練習網站 - 僅供教育用途使用',
-        placeholder: '請輸入名稱...'
+        placeholder: '請輸入名稱...',
+        alertEmpty: '請輸入名稱！',
+        iframeHeading: '🔄 透過 AJAX 動態載入的內容',
+        iframeName: '📝 名稱：',
+        iframeDate: '📅 日期：',
+        iframeHash: '🔐 SHA256 雜湊值：',
+        iframeLoadTime: '⏰ 載入時間：'
     },
     'zh-CN': {
         headerTitle: '爬虫练习网站',
@@ -28,7 +34,13 @@ const translations = {
         hashLabel: 'SHA256 哈希值：',
         iframeTitle: '动态加载内容 (iframe)',
         footerText: '© 2025 爬虫练习网站 - 仅供教育用途使用',
-        placeholder: '请输入名称...'
+        placeholder: '请输入名称...',
+        alertEmpty: '请输入名称！',
+        iframeHeading: '🔄 通过 AJAX 动态加载的内容',
+        iframeName: '📝 名称：',
+        iframeDate: '📅 日期：',
+        iframeHash: '🔐 SHA256 哈希值：',
+        iframeLoadTime: '⏰ 加载时间：'
     },
     'en': {
         headerTitle: 'Web Scraping Practice',
@@ -43,7 +55,13 @@ const translations = {
         hashLabel: 'SHA256 Hash:',
         iframeTitle: 'Dynamically Loaded Content (iframe)',
         footerText: '© 2025 Web Scraping Practice - For Educational Purposes Only',
-        placeholder: 'Enter name...'
+        placeholder: 'Enter name...',
+        alertEmpty: 'Please enter a name!',
+        iframeHeading: '🔄 Dynamically Loaded Content via AJAX',
+        iframeName: '📝 Name:',
+        iframeDate: '📅 Date:',
+        iframeHash: '🔐 SHA256 Hash:',
+        iframeLoadTime: '⏰ Load Time:'
     },
     'ja': {
         headerTitle: 'ウェブスクレイピング練習サイト',
@@ -58,7 +76,13 @@ const translations = {
         hashLabel: 'SHA256 ハッシュ値：',
         iframeTitle: '動的に読み込まれたコンテンツ (iframe)',
         footerText: '© 2025 ウェブスクレイピング練習サイト - 教育目的のみ',
-        placeholder: '名前を入力してください...'
+        placeholder: '名前を入力してください...',
+        alertEmpty: '名前を入力してください！',
+        iframeHeading: '🔄 AJAX で動的に読み込まれたコンテンツ',
+        iframeName: '📝 名前：',
+        iframeDate: '📅 日付：',
+        iframeHash: '🔐 SHA256 ハッシュ値：',
+        iframeLoadTime: '⏰ 読み込み時間：'
     }
 };
 
@@ -105,7 +129,9 @@ async function generateResult() {
     const nameInput = document.getElementById('nameInput').value.trim();
     
     if (!nameInput) {
-        alert('請輸入名稱！');
+        const lang = document.getElementById('lang').value;
+        const t = translations[lang];
+        alert(t.alertEmpty);
         return;
     }
     
@@ -133,6 +159,10 @@ async function generateResult() {
 function loadIframeContent(name, date, hash) {
     // 顯示 iframe section
     document.getElementById('iframeSection').style.display = 'block';
+    
+    // 獲取當前語言的翻譯
+    const lang = document.getElementById('lang').value;
+    const t = translations[lang];
     
     // 創建 iframe 內容的 HTML
     const iframeContent = `
@@ -176,19 +206,19 @@ function loadIframeContent(name, date, hash) {
         </head>
         <body>
             <div class="ajax-content" id="ajaxContent">
-                <h2>🔄 透過 AJAX 動態載入的內容</h2>
+                <h2>${t.iframeHeading}</h2>
                 <div class="data-item">
-                    <strong>📝 名稱：</strong>${name}
+                    <strong>${t.iframeName}</strong>${name}
                 </div>
                 <div class="data-item">
-                    <strong>📅 日期：</strong>${date}
+                    <strong>${t.iframeDate}</strong>${date}
                 </div>
                 <div class="data-item">
-                    <strong>🔐 SHA256 雜湊值：</strong>
+                    <strong>${t.iframeHash}</strong>
                     <div class="hash-display" id="hashValue">${hash}</div>
                 </div>
                 <div class="data-item">
-                    <strong>⏰ 載入時間：</strong>${new Date().toLocaleString()}
+                    <strong>${t.iframeLoadTime}</strong>${new Date().toLocaleString()}
                 </div>
             </div>
             <script>
